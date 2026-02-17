@@ -1,0 +1,10 @@
+{
+  "name": "steam-spec-finder",
+  "version": "1.0.0",
+  "description": "Steam 게임 최소/권장 사양 검색 웹앱",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

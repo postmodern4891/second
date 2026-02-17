@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스팀 게임 사양 검색</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>스팀 게임 사양 검색기</h1>
+      <p class="subtitle">게임 이름을 입력하면 최소/권장 사양을 확인할 수 있어요.</p>
+
+      <form id="search-form" class="search-box">
+        <input
+          type="text"
+          id="query"
+          name="query"
+          placeholder="예: Elden Ring"
+          minlength="2"
+          required
+        />
+        <button type="submit">검색</button>
+      </form>
+
+      <section>
+        <h2>검색 결과</h2>
+        <ul id="results" class="results"></ul>
+      </section>
+
+      <section id="spec-section" class="hidden">
+        <h2 id="game-title"></h2>
+        <img id="game-image" alt="게임 이미지" class="game-image" />
+        <a id="steam-link" target="_blank" rel="noreferrer">스팀 상점 페이지 열기</a>
+
+        <article class="spec-card">
+          <h3>최소 사양</h3>
+          <div id="minimum"></div>
+        </article>
+
+        <article class="spec-card">
+          <h3>권장 사양</h3>
+          <div id="recommended"></div>
+        </article>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
